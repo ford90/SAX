@@ -1,16 +1,20 @@
 package proceeding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ProceedingRec {
-	private String 		procId;
-	private String 		acronym;
-	private String 		procDesc;
-	private String 		procClass;
-	private String 		procTitle;
-	private String 		procSubtitle;
-	private String 		procVolume;
-	private String 		isbn;
-	private String 		copyYear;
-	private String 		pubDate;
+	private String 			procId;
+	private String 			acronym;
+	private String 			procDesc;
+	private String 			procClass;
+	private String 			procTitle;
+	private String 			procSubtitle;
+	private String 			procVolume;
+	private String 			isbn;
+	private String 			copyYear;
+	private String 			pubDate;
+	private List<Editor>	editors	= new ArrayList<Editor>();
 	
 	public String getProcId() {
 		return procId;
@@ -92,6 +96,18 @@ public class ProceedingRec {
 		this.pubDate = pubDate;
 	}
 	
+	public List<Editor> getEditors() {
+		return editors;
+	}
+	
+	public void setEditors(List editors) {
+		this.editors = editors;
+	}
+	
+	public void addEditor(Editor editor) {
+		this.editors.add(editor);
+	}
+	
 	public String toString() {
 		return    "id            : " + procId + "\n"
 				+ "acronym       : " + acronym + "\n"
@@ -101,7 +117,8 @@ public class ProceedingRec {
 				+ "procVolume    : " + procVolume + "\n"
 				+ "Isbn          : " + isbn + "\n"
 				+ "copyYear      : " + copyYear + "\n"
-				+ "pubDate       : " + pubDate;
+				+ "pubDate       : " + pubDate + "\n"
+				+ "editors       : " + editors;
 	}
 	
 }

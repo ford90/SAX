@@ -39,9 +39,9 @@ public class Editor {
 	}
 	
 	public String toString() {
-		return "seq_no  : " + seqNo +
-				": Name  : " + firstName + " " + lastName +
-				": Affil : " + affil +
-				": Email : " + email;
+		return "\n" + "seq_no  : " + seqNo + "\n" +
+				": Name  : " + firstName + " " + lastName + "\n" +
+				": Affil : " + affil + "\n" +
+				": Email : " + email + "\n" ;
 	}
 }

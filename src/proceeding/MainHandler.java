@@ -24,6 +24,9 @@ public class MainHandler extends DefaultHandler {
 		if(qName.equalsIgnoreCase("proceeding_rec")){
 			ProceedingRec procRec = new ProceedingRec();
 			this.objectStack.push(procRec);
+		} else if(qName.equalsIgnoreCase("ch_ed")) {
+			Editor editor = new Editor();
+			this.objectStack.push(editor);
 		}
 	}
 	
@@ -34,6 +37,10 @@ public class MainHandler extends DefaultHandler {
 		if(qName.equalsIgnoreCase("proceeding_rec")){
 			ProceedingRec procRec = (ProceedingRec) this.objectStack.pop();
 			procRecs.add(procRec);
+		} else if(qName.equalsIgnoreCase("ch_ed")) {
+			Editor editor = (Editor) this.objectStack.pop();
+			ProceedingRec procRec = (ProceedingRec) this.objectStack.peek();
+			procRec.addEditor(editor);
 		}
 	}
 	
@@ -83,7 +90,29 @@ public class MainHandler extends DefaultHandler {
 				currentParentElement().equals("proceeding_rec")) {
 			ProceedingRec procRec = (ProceedingRec)this.objectStack.peek();
 			procRec.setPubDate(value);
+		} else if( currentElement().equals("seq_no") && 
+				currentParentElement().equals("ch_ed")) {
+			Editor editor = (Editor) this.objectStack.peek();
+			editor.setSeqNo(new Integer(value));
+		} else if( currentElement().equals("first_name") &&
+				currentParentElement().equals("ch_ed")) {
+			Editor editor = (Editor) this.objectStack.peek();
+			editor.setFirstName(value);
+		} else if( currentElement().equals("last_name") &&
+				currentParentElement().equals("ch_ed") ) {
+			Editor editor = (Editor) this.objectStack.peek();
+			editor.setLastName(value);
+		} else if( currentElement().equals("affiliation") &&
+				currentParentElement().equals("ch_ed") ) {
+			Editor editor = (Editor) this.objectStack.peek();
+			editor.setAffil(value);
+		} else if( currentElement().equals("email_address") && 
+				currentParentElement().equals("ch_ed")) {
+			Editor editor = (Editor) this.objectStack.peek();
+			editor.setEmail(value);
 		}
+		
+		
 		
 	}
 
