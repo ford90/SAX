@@ -1,0 +1,36 @@
+<driverVehicleInfo>
+    <vehicle>
+        <vehicleId>1</vehicleId>
+        <name>Limousine</name>
+    </vehicle>
+    <vehicle>
+        <vehicleId>2</vehicleId>
+        <name>Aston Martin</name>
+    </vehicle>
+    <vehicle>
+        <vehicleId>3</vehicleId>
+        <name>Bus</name>
+    </vehicle>
+
+    <driver>
+        <driverId>1</driverId>
+        <name>John Doe</name>
+        <vehicleId>1</vehicleId>
+        <vehicleId>2</vehicleId>
+    </driver>
+    <driver>
+        <driverId>2</driverId>
+        <name>Joe Blocks</name>
+        <vehicleId>3</vehicleId>
+    </driver>
+    <vehicle>
+    	<vehicleId>16</vehicleId>
+    	<name>Ford Focus</name>
+    </vehicle>
+    <driver>
+    	<driverId>3</driverId>
+    	<name>Peter Ford</name>
+    	<vehicleId>16</vehicleId>
+    	<vehicleId>2</vehicleId>
+    </driver>
+</driverVehicleInfo>

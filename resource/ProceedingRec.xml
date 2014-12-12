@@ -1,0 +1,102 @@
+<proceeding>
+	<proceeding_rec>
+	        <proc_id>1</proc_id>
+	        <acronym>Ford 1</acronym>
+	        <proc_desc>Proceedings of Third International Workshop</proc_desc>
+	        <proc_class>conference</proc_class>
+	        <proc_title>Multimodal Brain Image Analysis</proc_title>
+	        <proc_subtitle/>
+	        <proc_volume_no>8159</proc_volume_no>
+	        <isbn>978-3-319-02125-6</isbn>
+	        <copyright_year>2013</copyright_year>
+	        <publication_date>12/10/2014</publication_date>
+	        <pages />
+	        <publisher>
+	                <publisher_id>PUB1368</publisher_id>
+	                <publisher_code>SPRIN</publisher_code>
+	                <publisher_name/>
+	                <publisher_address/>
+	                <publisher_city/>
+	                <publisher_state/>
+	                <publisher_country/>
+	                <publisher_zip_code/>
+	                <publisher_contact/>
+	                <publisher_phone/>
+	                <publisher_isbn_prefix/>
+	                <publisher_url/>
+	        </publisher>
+	        <categories>
+	            <primary_category>
+	                <cat_node />
+	            </primary_category>
+	        </categories>
+	        <chair_editor>
+	                <ch_ed>
+	                        <seq_no>1</seq_no>
+	                        <first_name>Li</first_name>
+	                        <middle_name />
+	                        <last_name>Shen</last_name>
+	                        <affiliation>Department of Radiology and Imaging Sciences, Indiana University School of Medicine, Indianapolis, USA</affiliation>
+	                        <role>Editor</role>
+	                        <email_address>shenli@iu.edu</email_address>
+	                </ch_ed>
+	                <ch_ed>
+	                        <seq_no>2</seq_no>
+	                        <first_name>Tianming</first_name>
+	                        <middle_name />
+	                        <last_name>Liu</last_name>
+	                        <affiliation>Cortical Architecture Imaging and Discovery Lab, Department of Computer Science, University of Georgia, Athens, USA</affiliation>
+	                        <role>Editor</role>
+	                        <email_address>tliu@cs.uga.edu</email_address>
+	                </ch_ed>
+	                <ch_ed>
+	                        <seq_no>3</seq_no>
+	                        <first_name>Pew-Thian</first_name>
+	                        <middle_name />
+	                        <last_name>Yap</last_name>
+	                        <affiliation>Department of Radiology and Biomedical Research Imaging Center (BRIC), The University of North Carolina at Chapel Hill, U.S.A.</affiliation>
+	                        <role>Editor</role>
+	                        <email_address>ptyap@med.unc.edu</email_address>
+	                </ch_ed>
+	                <ch_ed>
+	                        <seq_no>4</seq_no>
+	                        <first_name>Heng</first_name>
+	                        <middle_name />
+	                        <last_name>Huang</last_name>
+	                        <affiliation>Computer Science and Engineering, University of Texas at Arlington, Arlington, USA</affiliation>
+	                        <role>Editor</role>
+	                        <email_address>heng@uta.edu</email_address>
+	                </ch_ed>
+	                <ch_ed>
+	                        <seq_no>5</seq_no>
+	                        <first_name>Dinggang</first_name>
+	                        <middle_name />
+	                        <last_name>Shen</last_name>
+	                        <affiliation>Department of Radiology and BRIC, University of North Carolina at Chapel Hill, USA</affiliation>
+	                        <role>Editor</role>
+	                        <email_address>dgshen@med.unc.edu</email_address>
+	                </ch_ed>
+	                <ch_ed>
+	                        <seq_no>6</seq_no>
+	                        <first_name>Carl-Fredrik</first_name>
+	                        <middle_name />
+	                        <last_name>Westin</last_name>
+	                        <affiliation>Surgical Planning Laboratory, BWH, Harvard Medical School, Boston, USA</affiliation>
+	                        <role>Editor</role>
+	                        <email_address>westin@bwh.harvard.edu</email_address>
+	                </ch_ed>
+	        </chair_editor>
+	        <front_matter>
+	                <fm_file>978-3-319-02126-3_bookfrontmatter.pdf</fm_file>
+	                <fm_text>frontmatter</fm_text>
+	        </front_matter>
+	        <back_matter>
+	                <bm_file>978-3-319-02126-3_bookbackmatter.pdf</bm_file>
+	                <bm_text>backmatter</bm_text>
+	        </back_matter>
+	        <cover_images>
+	                <full_image>978-3-319-02126-3_cover_cover.jpg</full_image>
+	                <thumbnail>978-3-319-02126-3_cover_thumb.jpg</thumbnail>
+	        </cover_images>
+    </proceeding_rec>
+</proceeding>
