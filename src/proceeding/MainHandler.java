@@ -6,10 +6,11 @@ import java.util.Stack;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
+import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 public class MainHandler extends DefaultHandler {
-
+	
 	private Stack<String>	elementStack 			= new Stack<String>();
 	private Stack<Object> 	objectStack 			= new Stack<Object>();
 	

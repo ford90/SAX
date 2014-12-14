@@ -1,4 +1,16 @@
 <proceeding>
+    <conference_rec>
+        <conference_date>
+            <start_date>12/14/2014</start_date>
+            <end_date>12/15/2014</end_date>
+        </conference_date>
+        <conference_loc>
+            <city>Dix Hills</city>
+            <state>NY</state>
+            <country>United States</country>
+        </conference_loc>
+        <conference_url/>
+    </conference_rec>
 	<proceeding_rec>
 	        <proc_id>1</proc_id>
 	        <acronym>Ford 1</acronym>

@@ -11,7 +11,9 @@ public class MainTest {
 	public static void main(String[] args) {
 		SAXParserFactory factory = SAXParserFactory.newInstance();
 		try {
-			InputStream fileInput        = new FileInputStream("O:\\Workspace\\SAX\\resource\\ProceedingRec.xml");
+//			String fileName              = "O:\\Workspace\\SAX\\resource\\ProceedingRec.xml";
+			String fileName              = "C:\\Users\\Peter\\git\\SAX\\resource\\ProceedingRec.xml";
+			InputStream fileInput        = new FileInputStream(fileName);
 			SAXParser parser             = factory.newSAXParser();
 			MainHandler handler = new MainHandler();
 			
