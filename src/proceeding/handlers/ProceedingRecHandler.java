@@ -48,6 +48,8 @@ public class ProceedingRecHandler extends DefaultHandler{
 			procRec.setCopyYear(contents.toString());
 		} else if(qName.equals("publication_date")) {
 			procRec.setPubDate(contents.toString());
+		} else if(qName.equals("proceeding_rec")) {
+			parser.setContentHandler(parent);
 		}
 	}
 	

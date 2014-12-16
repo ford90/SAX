@@ -1,6 +1,6 @@
 package proceeding;
 
-public class Editor {
+public class Editor implements Printable {
 	private int    seqNo;
 	private String firstName;
 	private String lastName;

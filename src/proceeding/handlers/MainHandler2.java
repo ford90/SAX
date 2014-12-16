@@ -10,7 +10,9 @@ import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
+import proceeding.ConferenceRec;
 import proceeding.Editor;
+import proceeding.Printable;
 import proceeding.ProceedingRec;
 
 public class MainHandler2 extends DefaultHandler {
@@ -19,6 +21,7 @@ public class MainHandler2 extends DefaultHandler {
 	private ConferenceRecHandler			confRecHandler	= new ConferenceRecHandler();
 	private ProceedingRecHandler			procRecHandler	= new ProceedingRecHandler();
 	private CharArrayWriter					contents		= new CharArrayWriter();
+	private ArrayList<Printable>			printables		= new ArrayList<Printable>();
 	
 	public MainHandler2(XMLReader parser) {
 		this.parser = parser;
@@ -29,8 +32,14 @@ public class MainHandler2 extends DefaultHandler {
 			Attributes attributes) throws SAXException {
 		// This contains all the logic on where to delegate the Handler
 		if(qName.equals("proceeding_rec")) {
-			ProceedingRec procRec = new ProceedingRec();
+			ProceedingRec procRec	= new ProceedingRec();
+			this.procRecHandler.read(parser, this, procRec);
+			printables.add(procRec);
 			
+		} else if(qName.equals("conference_rec")) {
+			ConferenceRec confRec	= new ConferenceRec();
+			this.confRecHandler.read(parser, this, confRec);
+			printables.add(confRec);
 		}
 	}
 	
@@ -45,4 +54,10 @@ public class MainHandler2 extends DefaultHandler {
 		// Append values to contentWriter
 		contents.write(ch, start, length);
 	}
+	
+	public ArrayList<Printable> getPrintables() {
+		return printables;
+	}
+	
+	
 }

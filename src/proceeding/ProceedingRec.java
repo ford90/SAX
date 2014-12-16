@@ -3,7 +3,7 @@ package proceeding;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProceedingRec {
+public class ProceedingRec implements Printable {
 	private String 			procId;
 	private String 			acronym;
 	private String 			procDesc;

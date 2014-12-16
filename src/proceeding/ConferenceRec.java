@@ -1,6 +1,6 @@
 package proceeding;
 
-public class ConferenceRec {
+public class ConferenceRec implements Printable{
 	private String startDate;
 	private String endDate;
 	private String city;
@@ -36,5 +36,12 @@ public class ConferenceRec {
 	}
 	public void setCountry(String country) {
 		this.country = country;
+	}
+	public String toString() {
+		return "startDate : " + startDate + "\n" +
+				"endDate  : " + endDate   + "\n" +
+				"city     : " + city	  + "\n" +
+				"state    : " + state	  + "\n" +
+				"country  : " + country	  + "\n" ;
 	}
 }

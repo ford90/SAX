@@ -15,6 +15,7 @@ public class MainHandler extends DefaultHandler {
 	private Stack<Object> 	objectStack 			= new Stack<Object>();
 	
 	public List<ProceedingRec> procRecs				= new ArrayList<ProceedingRec>();
+	public List<ConferenceRec> confRecs				= new ArrayList<ConferenceRec>();
 	
 	
 	@Override
