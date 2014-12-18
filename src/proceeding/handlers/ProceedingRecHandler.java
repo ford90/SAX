@@ -7,6 +7,7 @@ import org.xml.sax.ContentHandler;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
+import proceeding.Editor;
 import proceeding.ProceedingRec;
 
 public class ProceedingRecHandler extends DefaultHandler{
@@ -27,6 +28,11 @@ public class ProceedingRecHandler extends DefaultHandler{
 	@Override
 	public void startElement(String namespaceURI, String localName, String qName, Attributes attr) {
 		contents.reset();
+		if(qName.equals("ch_ed")) {
+			Editor 			editor 			= new Editor();
+			EditorHandler 	editorHandler	= new EditorHandler();
+			editorHandler.read(parser, this, editor);
+		}
 	}
 	
 	@Override

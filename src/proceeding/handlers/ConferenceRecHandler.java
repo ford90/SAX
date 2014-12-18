@@ -45,6 +45,7 @@ public class ConferenceRecHandler extends DefaultHandler{
 			confRec.setCountry(contents.toString());
 		} else if( qName.equals("conference_rec")) {
 			parser.setContentHandler(parent);
+			System.out.println(this.confRec);
 		}
 		// Add logic here to revert the parser.setContentHandler back to parent
 		// parser.setContentHandler(parent);
