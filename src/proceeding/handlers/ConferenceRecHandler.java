@@ -8,6 +8,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 import proceeding.ConferenceRec;
+import proceeding.Printable;
 
 public class ConferenceRecHandler extends DefaultHandler{
 	
@@ -23,6 +24,7 @@ public class ConferenceRecHandler extends DefaultHandler{
 		this.confRec 	= confRec;
 		
 		this.parser.setContentHandler(this);
+		System.out.println("Inside conferenceRecHandler");
 	}
 	
 	@Override
@@ -46,6 +48,7 @@ public class ConferenceRecHandler extends DefaultHandler{
 		} else if( qName.equals("conference_rec")) {
 			parser.setContentHandler(parent);
 			System.out.println(this.confRec);
+			Printable.listOfObjects.add(confRec);
 		}
 		// Add logic here to revert the parser.setContentHandler back to parent
 		// parser.setContentHandler(parent);

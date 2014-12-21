@@ -44,4 +44,5 @@ public class ConferenceRec implements Printable{
 				"state    : " + state	  + "\n" +
 				"country  : " + country	  + "\n" ;
 	}
+
 }

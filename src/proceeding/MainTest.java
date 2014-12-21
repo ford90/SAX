@@ -22,14 +22,22 @@ public class MainTest {
 			proceeding.handlers.MainHandler2 handler = new proceeding.handlers.MainHandler2(reader);
 			parser.parse(fileInput, handler);
 			
+			System.out.println(Printable.listOfObjects.size());
+			
+			for(Printable obj : Printable.listOfObjects) {
+				
+				System.out.println("Printable object: " + obj.toString() );
+			}
+			
+			
 //			for(ProceedingRec procRec : handler.procRecs) {
 //				System.out.println(procRec);
 //			}
-			for(Printable printable : handler.getPrintables() ) {
-				System.out.println(printable);
-			}
+//			for(Printable printable : handler.getPrintables() ) {
+//				System.out.println(printable);
+//			}
 			
-			System.out.println(handler.getPrintables().size());
+//			System.out.println(handler.getPrintables().size());
 			
 			
 		} catch (Throwable e) {

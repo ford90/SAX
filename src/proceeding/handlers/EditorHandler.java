@@ -8,6 +8,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 import proceeding.Editor;
+import proceeding.Printable;
 
 public class EditorHandler extends DefaultHandler{
 	
@@ -22,6 +23,7 @@ public class EditorHandler extends DefaultHandler{
 		this.editor = editor;
 		
 		this.parser.setContentHandler(this);
+		System.out.println("Inside Editor Handler");
 	}
 	
 	@Override
@@ -45,6 +47,7 @@ public class EditorHandler extends DefaultHandler{
 		} else if(qName.equals("ch_ed")) {
 			this.parser.setContentHandler(parent);
 			System.out.println(this.editor);
+			Printable.listOfObjects.add(editor);
 		}
 	}
 	

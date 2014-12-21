@@ -8,6 +8,7 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.DefaultHandler;
 
 import proceeding.Editor;
+import proceeding.Printable;
 import proceeding.ProceedingRec;
 
 public class ProceedingRecHandler extends DefaultHandler{
@@ -23,6 +24,7 @@ public class ProceedingRecHandler extends DefaultHandler{
 		this.procRec 	= procRec;
 		// Change parser handler on the fly to this current so now 
 		this.parser.setContentHandler(this);
+		System.out.println("Inside proceedingRec Handler");
 	}
 	
 	@Override
@@ -56,6 +58,8 @@ public class ProceedingRecHandler extends DefaultHandler{
 			procRec.setPubDate(contents.toString());
 		} else if(qName.equals("proceeding_rec")) {
 			parser.setContentHandler(parent);
+			System.out.println(this.procRec);
+			Printable.listOfObjects.add(procRec);
 		}
 	}
 	
