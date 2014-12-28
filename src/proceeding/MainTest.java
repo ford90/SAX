@@ -8,6 +8,11 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.XMLReader;
 
+import proceeding.DAOManager.Table;
+import proceeding.dao.GenericDAO;
+import proceeding.dao.ProceedingDAO;
+import proceeding.model.Proceeding;
+
 public class MainTest {
 
 	public static void main(String[] args) {
@@ -22,24 +27,36 @@ public class MainTest {
 			proceeding.handlers.MainHandler2 handler = new proceeding.handlers.MainHandler2(reader);
 			parser.parse(fileInput, handler);
 			
-			System.out.println(Printable.listOfObjects.size());
-			
-			for(Printable obj : Printable.listOfObjects) {
-				
-				System.out.println("Printable object: " + obj.toString() );
+//			System.out.println(Printable.listOfObjects.size());
+//			int count = 0;
+//			for(Printable obj : Printable.listOfObjects) {
+//				count++;
+//				System.out.println("Printable object " + count  + ": "  + obj.toString() );
+//			}
+	
+			/***** Get Printable objects and create new Proceeding object from Printable*****/
+			Proceeding proceeding = new Proceeding();
+			for(Printable obj : Printable.listOfObjects ) {
+				if(obj instanceof ConferenceRec) {
+					ConferenceRec confRec = (ConferenceRec) obj;
+					proceeding.setConfStartDt(confRec.getStartDate());
+					proceeding.setConfEndDt(confRec.getEndDate());
+					proceeding.setConfLocCity(confRec.getCity());
+					proceeding.setConfLocState(confRec.getState());
+				}
+				else if(obj instanceof ProceedingRec) {
+					ProceedingRec procRec = (ProceedingRec) obj;
+					proceeding.setAcronym(procRec.getAcronym());
+					proceeding.setCpYear(procRec.getCopyYear());
+					proceeding.setIsbn(procRec.getIsbn());
+				}
 			}
 			
-			
-//			for(ProceedingRec procRec : handler.procRecs) {
-//				System.out.println(procRec);
-//			}
-//			for(Printable printable : handler.getPrintables() ) {
-//				System.out.println(printable);
-//			}
-			
-//			System.out.println(handler.getPrintables().size());
-			
-			
+			DAOManager daoManager = new DAOManager();
+			ProceedingDAO dao = (ProceedingDAO)daoManager.getDAO(Table.PROCEEDING);
+			System.out.println("Row Count : " + dao.count());
+			dao.update(proceeding);
+
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
